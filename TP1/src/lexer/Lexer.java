@@ -102,13 +102,14 @@ public class Lexer {
                 if(i>=LETTRE_a && i <= LETTRE_z){
                     String buffer = "";
                     while(ASCIIUtils.estUneMinuscule(i)||ASCIIUtils.estUnChiffre(i)){
-                        System.out.println("buffer " + buffer);
+                      //  System.out.println("buffer " + buffer);
                         if(ASCIIUtils.estUnChiffre(i)){
                             buffer = buffer + Character.getNumericValue(i);
                         }
                         else{
                             buffer = buffer + Character.toString((char)i);
                         }
+
                         i = in.read();
                     }if(buffer.equals("if"))
                         return new If();

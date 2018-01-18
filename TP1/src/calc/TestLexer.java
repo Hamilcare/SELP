@@ -17,7 +17,7 @@ public class TestLexer {
 		List<Token> tokens;
 		String inputFile = null;
 		InputStream is = System.in;
-		System.out.println(args.length);
+		//System.out.println(args.length);
 		if ( args.length>0 ) {
 			inputFile = args[0];
 			System.out.println(inputFile);

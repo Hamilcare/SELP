@@ -13,24 +13,25 @@ public class SLexer {
     private static Lexer lexer;
 
 
-    public static void init(InputStream is){
+    public static void init(InputStream is) throws Exception{
         try {
             lexer = new Lexer(is);
         }catch(Exception e) {
             System.out.println(e);
-            System.exit(-1);
+            throw e;
+            //System.exit(-1);
         }
 
     }
 
-    public static Token getToken() {
+    public static Token getToken() throws Exception{
 
-        try {
+//        try {
             return lexer.getToken();
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.exit(-1);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            System.exit(-1);
         }
-        return null;
-    }
+//        return null;
+
 }

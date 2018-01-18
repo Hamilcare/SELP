@@ -9,6 +9,11 @@ public class VariableExpressionAST extends ExpressionAST {
     }
 
     @Override
+    public int eval() {
+        return 0;
+    }
+
+    @Override
     public String toString(){
         return "\nVariable("+value+")";
     }

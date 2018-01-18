@@ -9,6 +9,11 @@ public class LiteralAST extends ExpressionAST {
     }
 
     @Override
+    public int eval() {
+        return value;
+    }
+
+    @Override
     public String toString() {
         return "LiteralAST("+value+")";
     }
