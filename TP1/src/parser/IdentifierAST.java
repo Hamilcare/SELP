@@ -1,10 +1,10 @@
 package parser;
 
-public class VariableExpressionAST extends ExpressionAST {
+public class IdentifierAST extends ExpressionAST {
 
     String value;
 
-    public VariableExpressionAST(String value) {
+    public IdentifierAST(String value) {
         this.value = value;
     }
 

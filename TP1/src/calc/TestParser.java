@@ -4,6 +4,7 @@ import lexer.EOF;
 import lexer.Lexer;
 import lexer.Token;
 import parser.AST;
+import parser.Body;
 import parser.ExpressionAST;
 import parser.SLexer;
 
@@ -31,13 +32,13 @@ public class TestParser {
 
 //        try {
             SLexer.init(is);
-            ExpressionAST arbre = ExpressionAST.parse(SLexer.getToken());
-//            System.out.println(arbre);
-        try {
+            Body arbre = Body.parse(SLexer.getToken());
+            System.out.println(arbre);
+/*        try {
             System.out.println(arbre.eval());
         }catch (Exception e){
             throw new Exception("Erreur evaluation");
-        }
+        }*/
             Token eof = SLexer.getToken();
             if(!(eof instanceof EOF)){
                 throw new Exception("EOF Expected");

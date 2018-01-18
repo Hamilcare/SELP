@@ -2,8 +2,6 @@ package parser;
 
 import lexer.*;
 
-import javax.swing.plaf.SliderUI;
-
 public abstract class ExpressionAST extends AST{
 
     public abstract int eval() throws Exception;
@@ -50,7 +48,7 @@ public abstract class ExpressionAST extends AST{
         }
         //variable
         else if(t instanceof  Identifier){
-            return new VariableExpressionAST(((Identifier)t).getValue());
+            return new IdentifierAST(((Identifier)t).getValue());
         }
 
         else{
