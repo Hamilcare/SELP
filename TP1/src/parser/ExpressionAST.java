@@ -5,6 +5,10 @@ import lexer.*;
 import javax.swing.plaf.SliderUI;
 
 public abstract class ExpressionAST extends AST{
+
+    public abstract int eval() throws Exception;
+
+
     public static ExpressionAST parse (Token t) throws Exception {
         if(t instanceof LPar){
             Token t2 = SLexer.getToken();
@@ -52,7 +56,7 @@ public abstract class ExpressionAST extends AST{
         else{
             System.out.println("Error on " + t.getClass());
             System.out.println("Error on " + t);
-            throw new Exception("Syntax Error");
+            throw new Exception("Syntax Error, unexpected token : "+t);
         }
         return null;
     }

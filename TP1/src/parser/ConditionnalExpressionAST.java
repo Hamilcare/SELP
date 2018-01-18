@@ -10,6 +10,14 @@ public class ConditionnalExpressionAST extends ExpressionAST {
     }
 
     @Override
+    public int eval() throws Exception {
+        if(e1.eval()!=0)
+            return e2.eval();
+        else
+            return e3.eval();
+    }
+
+    @Override
     public String toString() {
         return "ConditionnalExpression("+e1+", "+e2+", "+e3+")";
     }

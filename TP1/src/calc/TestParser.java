@@ -1,5 +1,6 @@
 package calc;
 
+import lexer.EOF;
 import lexer.Lexer;
 import lexer.Token;
 import parser.AST;
@@ -17,24 +18,32 @@ public class TestParser {
 
         String inputFile = null;
         InputStream is = System.in;
-        System.out.println(args.length);
+        //System.out.println(args.length);
         if ( args.length>0 ) {
 
             inputFile = args[0];
-            System.out.println(inputFile);
+            //System.out.println(inputFile);
             is = new FileInputStream(inputFile);
             //SLexer.init(is);
 
 
         }
 
-        try {
+//        try {
             SLexer.init(is);
-            AST arbre = ExpressionAST.parse(SLexer.getToken());
-            System.out.println(arbre);
-
-        } catch (Exception e) {
-            e.printStackTrace();
+            ExpressionAST arbre = ExpressionAST.parse(SLexer.getToken());
+//            System.out.println(arbre);
+        try {
+            System.out.println(arbre.eval());
+        }catch (Exception e){
+            throw new Exception("Erreur evaluation");
         }
+            Token eof = SLexer.getToken();
+            if(!(eof instanceof EOF)){
+                throw new Exception("EOF Expected");
+            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
 }

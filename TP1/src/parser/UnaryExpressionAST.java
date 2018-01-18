@@ -7,6 +7,11 @@ public class UnaryExpressionAST extends ExpressionAST {
         operande = e;
     }
 
+    @Override
+    public int eval() throws Exception{
+        return -1 * operande.eval();
+    }
+
     public String toString(){
         return "UnaryExpression("+operande+")";
     }
