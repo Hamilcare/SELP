@@ -1,5 +1,7 @@
 package parser;
 
+import java.util.HashMap;
+
 public class LiteralAST extends ExpressionAST {
 
     int value;
@@ -11,6 +13,11 @@ public class LiteralAST extends ExpressionAST {
     @Override
     public int eval() {
         return value;
+    }
+
+    @Override
+    public int eval(HashMap<String, Integer> bindings) throws Exception {
+        return this.eval();
     }
 
     @Override

@@ -1,5 +1,7 @@
 package parser;
 
+import java.util.HashMap;
+
 public class ConditionnalExpressionAST extends ExpressionAST {
     public ExpressionAST e1, e2, e3;
 
@@ -7,6 +9,11 @@ public class ConditionnalExpressionAST extends ExpressionAST {
         this.e1 = e1;
         this.e2 = e2;
         this.e3 = e3;
+    }
+
+    @Override
+    public int eval(HashMap<String, Integer> bindings) throws Exception {
+        return this.eval();
     }
 
     @Override

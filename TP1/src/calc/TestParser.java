@@ -11,6 +11,7 @@ import parser.SLexer;
 import javax.swing.plaf.SliderUI;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 public class TestParser {
@@ -32,13 +33,14 @@ public class TestParser {
 
 //        try {
             SLexer.init(is);
-            Body arbre = Body.parse(SLexer.getToken());
-            System.out.println(arbre);
-/*        try {
+            Body arbre = Body.parse(SLexer.getToken(), new ArrayList<>());
+            //System.out.println("arbre : "+arbre);
+            //arbre.eval();
+        try {
             System.out.println(arbre.eval());
         }catch (Exception e){
-            throw new Exception("Erreur evaluation");
-        }*/
+            throw new Exception("Erreur evaluation " + e.getMessage());
+        }
             Token eof = SLexer.getToken();
             if(!(eof instanceof EOF)){
                 throw new Exception("EOF Expected");

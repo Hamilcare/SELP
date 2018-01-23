@@ -1,4 +1,6 @@
-package test;
+package src.test;
+
+import src.test.Test;
 
 public class TestRed extends Test {
 	public static void main(String[] args){

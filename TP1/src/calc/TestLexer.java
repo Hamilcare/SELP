@@ -27,7 +27,7 @@ public class TestLexer {
 
 		try {
 			SLexer.init(is);
-			ExpressionAST.parse(SLexer.getToken());
+			ExpressionAST.parse(SLexer.getToken(),false);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

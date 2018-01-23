@@ -1,4 +1,6 @@
-package test;
+package src.test;
+
+import src.test.Test;
 
 public class TestErrors extends Test {
 	
