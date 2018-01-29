@@ -1,10 +1,10 @@
 
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¾ÄÃ˜ûÿÿÿÿ8ÔãÔˆ”,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¢ýï¯8Ó´¨‹”,
-dsquid:CallToDeprecatedMethod"8Remove this use of "ANTLRInputStream"; it is deprecated.(úÊ¢@8ÔãÔˆ”,
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(ŒÑ€Ñ8æ¿½‹”,
-dsquid:CallToDeprecatedMethod"8Remove this use of "ANTLRInputStream"; it is deprecated.(úÊ¢@8ÔãÔˆ”,
 fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(©ÅY8ÔãÔˆ”,
+dsquid:CallToDeprecatedMethod"8Remove this use of "ANTLRInputStream"; it is deprecated.(úÊ¢@8ÔãÔˆ”,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¾ÄÃ˜ûÿÿÿÿ8ÔãÔˆ”,
 Y
 squid:S106"9Replace this use of System.out or System.err by a logger.(û¥éýÿÿÿÿ8£ÒÚˆ”,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¢ýï¯8Ó´¨‹”,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ŒÑ€Ñ8åþ§”,
+dsquid:CallToDeprecatedMethod"8Remove this use of "ANTLRInputStream"; it is deprecated.(úÊ¢@8ÔãÔˆ”,

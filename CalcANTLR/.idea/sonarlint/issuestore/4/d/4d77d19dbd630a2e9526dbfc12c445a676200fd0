@@ -1,14 +1,6 @@
 
-Vsquid:S1161":Add the "@Override" annotation above this method signature(üÓæ8ÕãÔˆ”,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕãÔˆ”,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¬£™½8ŞÍÔ‹”,
-Hsquid:S1905"'Remove this unnecessary cast to "Body".(Øõ±öıÿÿÿÿ8¡áÈ‹”,
-[squid:S1161":Add the "@Override" annotation above this method signature(’Á”ıÿÿÿÿ8ÕãÔˆ”,
-Vsquid:S1161":Add the "@Override" annotation above this method signature(ä•­8¡áÈ‹”,
-Rsquid:S1751"6Remove this "return" statement or make it conditional.(“Ï‘ó8ÕãÔˆ”,
-{squid:UselessImportCheck"RRemove this unused import 'com.sun.org.apache.xpath.internal.operations.Variable'.(‘ç¯ˆ8ÕãÔˆ”,
-[squid:S1161":Add the "@Override" annotation above this method signature(ãŒÕúÿÿÿÿ8ÕãÔˆ”,
 Qsquid:S1191"5Use classes from the Java API instead of Sun classes.(‘ç¯ˆ8ÕãÔˆ”,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(¶äí”øÿÿÿÿ8®Í»‹”,
-[squid:S1161":Add the "@Override" annotation above this method signature(¯´‚€üÿÿÿÿ8ÕãÔˆ”,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕãÔˆ”,
+Hsquid:S1905"'Remove this unnecessary cast to "Body".(Øõ±öıÿÿÿÿ8¡áÈ‹”,
+{squid:UselessImportCheck"RRemove this unused import 'com.sun.org.apache.xpath.internal.operations.Variable'.(‘ç¯ˆ8ÕãÔˆ”,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ú•ÜÁıÿÿÿÿ8Ø«š”,
