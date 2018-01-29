@@ -1,9 +1,9 @@
 package lexer;
 
 public class Identifier implements Token {
-    String value;
+    private String value;
 
-    public Identifier(String v){
+    protected Identifier(String v){
         value = v;
     }
 

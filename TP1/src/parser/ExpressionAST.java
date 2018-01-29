@@ -1,13 +1,13 @@
 package parser;
 
 import lexer.*;
-
-import java.util.HashMap;
+import parser.exception.SyntaxErrorException;
+import parser.exception.UnknownOperatorException;
+import parser.exception.VariableUndefinedException;
 
 public abstract class ExpressionAST extends AST{
 
-    public  abstract int eval(HashMap<String,Integer> bindings) throws Exception;
-    public abstract int eval() throws Exception;
+    public abstract int eval() throws UnknownOperatorException, VariableUndefinedException;
 
 
     public static ExpressionAST parse (Token t, boolean alreadyCheckByBody) throws Exception {
@@ -28,7 +28,7 @@ public abstract class ExpressionAST extends AST{
                 else if((rightOperande = ExpressionAST.parse(last,false)) instanceof ExpressionAST && (last = SLexer.getToken()) instanceof RPar){
                     return new BinaryExpressionAST(OPToken.MINUS,operande1,rightOperande);
                 }
-                else throw new Exception("Syntax Error Missing Right Parenthesis");
+                else throw new SyntaxErrorException("Syntax Error Missing Right Parenthesis");
             }
             //BinaryExpression
             else if ( t2 instanceof OPToken){
@@ -37,7 +37,7 @@ public abstract class ExpressionAST extends AST{
                 Token last = SLexer.getToken();
                 if(last instanceof RPar)
                     return new BinaryExpressionAST((OPToken)t2,leftOperande,rightOperande);
-                else throw new Exception("Syntax Error Missing Right Parenthesis");
+                else throw new SyntaxErrorException("Syntax Error Missing Right Parenthesis");
             }
             //ConditionnalExpression
             else if( t2 instanceof If){
@@ -47,7 +47,7 @@ public abstract class ExpressionAST extends AST{
                 Token last = SLexer.getToken();
                 if(last instanceof RPar){
                     return new ConditionnalExpressionAST(e1,e2,e3);
-                }else throw new Exception("Syntax Error Missing Right Parenthesis");
+                }else throw new SyntaxErrorException("Syntax Error Missing Right Parenthesis");
             }
         //Constante
         }else if( t instanceof LiteralToken) {
@@ -59,15 +59,13 @@ public abstract class ExpressionAST extends AST{
         }
 
         else{
-            System.out.println("Error on " + t.getClass());
-            System.out.println("Error on " + t);
-            throw new Exception("Syntax Error, unexpected token : "+t);
+            throw new SyntaxErrorException(t);
         }
         return null;
     }
 
     @Override
     public String toString() {
-        return null;
+        return "";
     }
 }

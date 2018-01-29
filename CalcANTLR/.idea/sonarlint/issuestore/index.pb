@@ -1,0 +1,33 @@
+
+J
+src/parser/Identifier.java,a/4/a425bdf3cc770f2cca717afc50fe6ce51f031705
+F
+src/parser/VarDef.java,b/7/b7e21ce675fc25627d5dedc0494831f0e67265e4
+J
+src/parser/VariableId.java,d/2/d252a3be0167c9a24d8e09ef0aa5d09d47ece686
+O
+src/parser/CalcBaseVisitor.java,9/4/94082cf921c2d4fbd8cc6dcfa18b0ac42f84f732
+C
+src/parser/AST.java,6/a/6a214d602d63be8cb8aeb834093ddba359d4c308
+B
+src/calc/Calc.java,6/e/6e8517f88f913c5477cad6c1f9c1c3de9c1a3df0
+G
+src/parser/Literal.java,8/5/8528f9b8e57e6a81179409e9e756fc95ae034674
+U
+%src/parser/ConditionalExpression.java,4/1/41df35e5c2f32d0e2a682fc76a091b94987fd13d
+J
+src/parser/CalcParser.java,6/5/65a2858be793f444a0589021d149c3e703400fe6
+O
+src/parser/UnaryExpression.java,8/d/8d5b3837e6a98f16d7ceaa06509a37873f5ddbef
+J
+src/parser/Expression.java,f/a/fae618d325757a8acf03b2d592765c94004379ad
+I
+test/greenUnExpMinus.calc,6/4/640a5ac2305955f3f00e7cad7ec8790e3e561fb4
+B
+src/parser/Calc.g4,f/3/f31fde6ad765ebcb68306faa5c6ce7f2ca149687
+F
+src/parser/Calc.tokens,6/8/68bcd7201734e3e9bad535a2c4d94b92d9f3b68b
+D
+src/parser/Body.java,e/4/e4e1ed23ab26e32c601716c8fc5bd2e0dbddef66
+J
+src/parser/ASTVisitor.java,4/d/4d77d19dbd630a2e9526dbfc12c445a676200fd0

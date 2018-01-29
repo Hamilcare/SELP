@@ -1,13 +1,13 @@
 package parser;
 
 import lexer.OPToken;
-
-import java.util.HashMap;
+import parser.exception.UnknownOperatorException;
+import parser.exception.VariableUndefinedException;
 
 public class BinaryExpressionAST extends ExpressionAST {
-    OPToken op;
-    ExpressionAST rightOperande;
-    ExpressionAST leftOperande;
+    private OPToken op;
+    private ExpressionAST rightOperande;
+    private ExpressionAST leftOperande;
 
     public BinaryExpressionAST(OPToken op,ExpressionAST le, ExpressionAST re){
         this.op = op;
@@ -15,8 +15,9 @@ public class BinaryExpressionAST extends ExpressionAST {
         leftOperande = le;
     }
 
+
     @Override
-    public int eval(HashMap<String, Integer> bindings) throws Exception {
+    public int eval() throws UnknownOperatorException, VariableUndefinedException {
         int left = leftOperande.eval();
         int right = rightOperande.eval();
 
@@ -41,39 +42,7 @@ public class BinaryExpressionAST extends ExpressionAST {
                     return 0;
 
             default:
-                throw  new Exception("Unknow operator");
-
-
-        }
-    }
-
-    @Override
-    public int eval() throws Exception{
-        int left = leftOperande.eval();
-        int right = rightOperande.eval();
-
-        switch (op) {
-            case MINUS:
-                return left - right;
-            case PLUS:
-                return left + right;
-            case DIVIDE:
-                return left/right;
-            case TIMES:
-                return left * right;
-            case EQUAL:
-                if(left==right)
-                    return 1;
-                else
-                    return 0;
-            case LESS:
-                if(left < right)
-                    return 1;
-                else
-                    return 0;
-
-            default:
-                throw  new Exception("Unknow operator");
+                throw  new UnknownOperatorException();
 
 
         }

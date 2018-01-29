@@ -1,30 +1,21 @@
 package parser;
 
-import java.util.HashMap;
+import parser.exception.VariableUndefinedException;
 
 public class IdentifierAST extends ExpressionAST {
 
-    String value;
+    private String value;
 
     public IdentifierAST(String value) {
         this.value = value;
     }
 
     @Override
-    public int eval(HashMap<String,Integer> bindings) throws Exception {
-        if(bindings.containsKey(this.getValue()))
-            return bindings.get(this.getValue());
+    public int eval() throws VariableUndefinedException {
+        if(Body.getBindings().containsKey(this.getValue()))
+            return Body.getBindings().get(this.getValue());
         else
-            throw new Exception("Variable not defined : "+this.getValue());
-    }
-
-    @Override
-    public int eval()throws Exception{
-        //throw new Exception("Wrong evaluation of Identifier");
-        if(Body.bindings.containsKey(this.getValue()))
-            return Body.bindings.get(this.getValue());
-        else
-            throw new Exception("Variable not defined : "+this.getValue());
+            throw new VariableUndefinedException(this.getValue());
     }
 
     @Override

@@ -6,5 +6,5 @@ public enum OPToken implements Token {
     TIMES,
     DIVIDE,
     EQUAL,
-    LESS;
+    LESS
 }

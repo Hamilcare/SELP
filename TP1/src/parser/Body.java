@@ -1,17 +1,19 @@
 package parser;
 
 import lexer.*;
+import parser.exception.RightParenthesisExpectedException;
+import parser.exception.VarIDExpectedException;
+import parser.exception.VariableAlreadyDefinedException;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class Body extends AST{
 
-    List<VarDefAST> lVarDef  = new ArrayList<>();
-    ExpressionAST expression ;
-    public static HashMap<String,Integer> bindings;
+    private List<VarDefAST> lVarDef;
+    private ExpressionAST expression ;
+    private static Map<String,Integer> bindings;
 
 
     public Body(List<VarDefAST> lVarDef, ExpressionAST expression) {
@@ -19,10 +21,14 @@ public class Body extends AST{
         this.expression = expression;
     }
 
+    public static Map<String,Integer> getBindings(){
+        return bindings;
+    }
+
     public static Body parse (Token t, List<VarDefAST>listVarDef) throws Exception {
         if(t instanceof LPar){
             Token t2 = SLexer.getToken();
-         //   System.out.println("current t2 "+t2);
+
             //VarDef
             if(t2 instanceof Defvar){
                 ExpressionAST id = ExpressionAST.parse(SLexer.getToken(),false);
@@ -31,20 +37,18 @@ public class Body extends AST{
                 if(last instanceof RPar){
                     if(id instanceof IdentifierAST){
                         if(listVarDef.contains(new VarDefAST((IdentifierAST)id,expressionAST)))
-                            throw new Exception("Variable "+id+" already defined");
+                            throw new VariableAlreadyDefinedException(id.toString());
                         listVarDef.add(new VarDefAST((IdentifierAST)id,expressionAST));
                         return Body.parse(SLexer.getToken(),listVarDef);
                     }else{
-                        throw new Exception("ERROR, Expecting VarID, found"+id+" which is "+id.getClass());
+                        throw new VarIDExpectedException(id.toString(),id.getClass().toString());
                     }
                 }else{
-                    throw new Exception("ERROR, Expecting right parenthesis, found "+last);
+                    throw new RightParenthesisExpectedException(last.toString());
                 }
             }
             else{
-                //System.out.println("Debut parse Expression ");
                 ExpressionAST expressionAST = ExpressionAST.parse(t2,true);
-                //System.out.println("Expression du body : " + expressionAST);
                 return new Body (listVarDef,expressionAST);
             }
 
@@ -53,12 +57,10 @@ public class Body extends AST{
         }
         //ExpressionAST
         else{
-            //System.out.println("Debut parse Expression ");
             ExpressionAST expressionAST = ExpressionAST.parse(t,false);
-            //System.out.println("Expression du body : " + expressionAST);
             return new Body (listVarDef,expressionAST);
         }
-        //throw new Exception("Invalid Syntax on "+t);
+
 
     }
 
@@ -75,10 +77,6 @@ public class Body extends AST{
         for(VarDefAST currentVarDef : lVarDef){
             bindings.put(currentVarDef.getId().getValue(),currentVarDef.getExpression().eval());
         }
-
-        //for(Map.Entry<String,Integer> entry : binding.entrySet()){
-        //    System.out.println("id "+ entry.getKey() + " value: "+entry.getValue());
-        //}
 
         return this.expression.eval();
     }

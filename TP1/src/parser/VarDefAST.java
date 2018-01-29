@@ -1,11 +1,9 @@
 package parser;
 
-import java.util.HashMap;
-
 public class VarDefAST extends AST{
 
-    IdentifierAST id;
-    ExpressionAST expression;
+    private IdentifierAST id;
+    private ExpressionAST expression;
 
     public VarDefAST(IdentifierAST id, ExpressionAST expression) {
         this.id = id;
@@ -22,11 +20,7 @@ public class VarDefAST extends AST{
 
     @Override
     public boolean equals(Object varDef){
-        //System.out.println("this : "+this.id+" other : "+((VarDefAST) varDef).id);
-        if(varDef instanceof VarDefAST)
-            return this.getId().toString().equals(((VarDefAST) varDef).getId().toString());
-        else
-            return false;
+        return varDef instanceof VarDefAST && this.getId().toString().equals(((VarDefAST) varDef).getId().toString());
     }
 
 
