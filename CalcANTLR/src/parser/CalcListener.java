@@ -1,4 +1,4 @@
-// Generated from /home/valentin/Documents/Cours/session2/structure_execution_langages_de_programmation/CalcANTLR/src/parser/Calc.g4 by ANTLR 4.7
+// Generated from /home/valentin/Documents/Cours/session2/structure_execution_langages_de_programmation/CCalc/src/parser/Calc.g4 by ANTLR 4.7
 package parser;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -58,42 +58,6 @@ public interface CalcListener extends ParseTreeListener {
 	 */
 	void exitVarDef(CalcParser.VarDefContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code Literal}
-	 * labeled alternative in {@link CalcParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterLiteral(CalcParser.LiteralContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code Literal}
-	 * labeled alternative in {@link CalcParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitLiteral(CalcParser.LiteralContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code Variable}
-	 * labeled alternative in {@link CalcParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterVariable(CalcParser.VariableContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code Variable}
-	 * labeled alternative in {@link CalcParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitVariable(CalcParser.VariableContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code UnaryExpression}
-	 * labeled alternative in {@link CalcParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterUnaryExpression(CalcParser.UnaryExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code UnaryExpression}
-	 * labeled alternative in {@link CalcParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitUnaryExpression(CalcParser.UnaryExpressionContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code BinaryExpression}
 	 * labeled alternative in {@link CalcParser#expression}.
 	 * @param ctx the parse tree
@@ -106,39 +70,53 @@ public interface CalcListener extends ParseTreeListener {
 	 */
 	void exitBinaryExpression(CalcParser.BinaryExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code ConditionalExpression}
+	 * Enter a parse tree produced by the {@code MinusExpression}
 	 * labeled alternative in {@link CalcParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterConditionalExpression(CalcParser.ConditionalExpressionContext ctx);
+	void enterMinusExpression(CalcParser.MinusExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code ConditionalExpression}
+	 * Exit a parse tree produced by the {@code MinusExpression}
 	 * labeled alternative in {@link CalcParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitConditionalExpression(CalcParser.ConditionalExpressionContext ctx);
+	void exitMinusExpression(CalcParser.MinusExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code FunctionCall}
+	 * Enter a parse tree produced by the {@code Literal}
 	 * labeled alternative in {@link CalcParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunctionCall(CalcParser.FunctionCallContext ctx);
+	void enterLiteral(CalcParser.LiteralContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code FunctionCall}
+	 * Exit a parse tree produced by the {@code Literal}
 	 * labeled alternative in {@link CalcParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunctionCall(CalcParser.FunctionCallContext ctx);
+	void exitLiteral(CalcParser.LiteralContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link CalcParser#tail}.
+	 * Enter a parse tree produced by the {@code SubstractExpression}
+	 * labeled alternative in {@link CalcParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterTail(CalcParser.TailContext ctx);
+	void enterSubstractExpression(CalcParser.SubstractExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link CalcParser#tail}.
+	 * Exit a parse tree produced by the {@code SubstractExpression}
+	 * labeled alternative in {@link CalcParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitTail(CalcParser.TailContext ctx);
+	void exitSubstractExpression(CalcParser.SubstractExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code NotExpression}
+	 * labeled alternative in {@link CalcParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterNotExpression(CalcParser.NotExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code NotExpression}
+	 * labeled alternative in {@link CalcParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitNotExpression(CalcParser.NotExpressionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CalcParser#variableId}.
 	 * @param ctx the parse tree

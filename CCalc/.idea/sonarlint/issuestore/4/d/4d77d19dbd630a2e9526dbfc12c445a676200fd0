@@ -1,0 +1,7 @@
+
+Tsquid:UselessImportCheck"&Remove this unused import 'calc.Calc'.(“­°¾ıÿÿÿÿ8­ÉåÀ”,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8­ÉåÀ”,
+[squid:S1161":Add the "@Override" annotation above this method signature(—ïããıÿÿÿÿ8­ÉåÀ”,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8­ÉåÀ”,
+Nsquid:S1905"-Remove this unnecessary cast to "Expression".(Ùƒö·ûÿÿÿÿ8­ÉåÀ”,
+Hsquid:S1905"'Remove this unnecessary cast to "Body".(Øõ±öıÿÿÿÿ8­ÉåÀ”,

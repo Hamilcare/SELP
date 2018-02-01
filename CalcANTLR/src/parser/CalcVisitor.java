@@ -1,4 +1,4 @@
-// Generated from /home/valentin/Documents/Cours/session2/structure_execution_langages_de_programmation/CalcANTLR/src/parser/Calc.g4 by ANTLR 4.7
+// Generated from /home/valentin/Documents/Cours/session2/structure_execution_langages_de_programmation/CCalc/src/parser/Calc.g4 by ANTLR 4.7
 package parser;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -41,27 +41,6 @@ public interface CalcVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitVarDef(CalcParser.VarDefContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code Literal}
-	 * labeled alternative in {@link CalcParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitLiteral(CalcParser.LiteralContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code Variable}
-	 * labeled alternative in {@link CalcParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitVariable(CalcParser.VariableContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code UnaryExpression}
-	 * labeled alternative in {@link CalcParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitUnaryExpression(CalcParser.UnaryExpressionContext ctx);
-	/**
 	 * Visit a parse tree produced by the {@code BinaryExpression}
 	 * labeled alternative in {@link CalcParser#expression}.
 	 * @param ctx the parse tree
@@ -69,25 +48,33 @@ public interface CalcVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitBinaryExpression(CalcParser.BinaryExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code ConditionalExpression}
+	 * Visit a parse tree produced by the {@code MinusExpression}
 	 * labeled alternative in {@link CalcParser#expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitConditionalExpression(CalcParser.ConditionalExpressionContext ctx);
+	T visitMinusExpression(CalcParser.MinusExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code FunctionCall}
+	 * Visit a parse tree produced by the {@code Literal}
 	 * labeled alternative in {@link CalcParser#expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFunctionCall(CalcParser.FunctionCallContext ctx);
+	T visitLiteral(CalcParser.LiteralContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link CalcParser#tail}.
+	 * Visit a parse tree produced by the {@code SubstractExpression}
+	 * labeled alternative in {@link CalcParser#expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTail(CalcParser.TailContext ctx);
+	T visitSubstractExpression(CalcParser.SubstractExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code NotExpression}
+	 * labeled alternative in {@link CalcParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNotExpression(CalcParser.NotExpressionContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CalcParser#variableId}.
 	 * @param ctx the parse tree

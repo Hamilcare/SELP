@@ -1,6 +1,6 @@
 
-Qsquid:S1191"5Use classes from the Java API instead of Sun classes.(‘ç¯ˆ8ÕãÔˆ”,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕãÔˆ”,
 Hsquid:S1905"'Remove this unnecessary cast to "Body".(Øõ±öıÿÿÿÿ8¡áÈ‹”,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÕãÔˆ”,
 {squid:UselessImportCheck"RRemove this unused import 'com.sun.org.apache.xpath.internal.operations.Variable'.(‘ç¯ˆ8ÕãÔˆ”,
 lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ú•ÜÁıÿÿÿÿ8Ø«š”,
+Qsquid:S1191"5Use classes from the Java API instead of Sun classes.(‘ç¯ˆ8ÕãÔˆ”,

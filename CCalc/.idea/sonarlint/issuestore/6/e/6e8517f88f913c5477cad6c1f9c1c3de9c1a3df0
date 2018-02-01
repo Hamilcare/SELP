@@ -1,0 +1,22 @@
+
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–ÏâÊþÿÿÿÿ8‰þ¥À”,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(®ýáëûÿÿÿÿ8úÂ••”,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(®ýáëûÿÿÿÿ8åâ‹•”,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.( Â´8åâ‹•”,
+dsquid:CallToDeprecatedMethod"8Remove this use of "ANTLRInputStream"; it is deprecated.(úÊ¢@8åâ‹•”,
+Ksquid:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8®¶¯À”,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¿ŸúÓ8åâ‹•”,
+ssquid:S2737"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(ö™û8®¶¯À”,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ýà¾Ñ8åâ‹•”,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ê„á÷8Ëé¥À”,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(’åíÍ8åâ‹•”,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(ç¥ì´øÿÿÿÿ8…ÏœÀ”,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¾ïÆ¥ûÿÿÿÿ8Ó×–•”,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(’…âö8åâ‹•”,
+dsquid:CallToDeprecatedMethod"8Remove this use of "ANTLRInputStream"; it is deprecated.(úÊ¢@8åâ‹•”,
+]squid:S2259"AA "NullPointerException" could be thrown; "out" is nullable here.(„¸Ç§8Ž³·À”,
